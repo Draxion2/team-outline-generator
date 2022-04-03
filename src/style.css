@@ -1,0 +1,79 @@
+:root {
+    --white: #fff;
+    --gray: #eee;
+    --primary-color: #453928;
+    --secondary-color: #816566;
+    --tertiary-color: #ab9565;
+    --primary-border-color: #e3c697;
+    --secondary-border-color: #d2674e;
+}
+
+/* universal selectors */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 10px;
+}
+
+/* header start */
+header {
+    height: 100px;
+    background: var(--primary-color);
+    border-bottom: 5px solid var(--primary-border-color);
+}
+
+header h2 {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100px;
+    color: var(--white);
+}
+/* header end */
+
+.teamDisplay {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* member card start */
+
+.member-card {
+    width: 200px;
+    margin: 20px;
+    border: 5px double var(--primary-border-color);
+    box-shadow: 2px 2px 10px #000;
+}
+
+.card-header {
+    color: var(--white);
+    height: 50px;
+    padding: 15px;
+    background: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-border-color);
+}
+
+.card-body {
+    height: 150px;
+    padding: 20px;
+    background: var(--gray);
+}
+
+.card-body ul li {
+    list-style: none;
+    word-wrap: break-word;
+    background: var(--white);
+    margin-top: 5px;
+    padding: 5px;
+    height: 30px;
+    font-size: 14px;
+    box-shadow: 2px 2px 10px #000;
+}
+
+/* member card end */

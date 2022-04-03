@@ -1,7 +1,7 @@
 // init packages
 const fs = require("fs");
 const inquirer = require("inquirer");
-// const generateHtml = require("./src/generateHtml.js");
+const generateHtml = require("./src/generateHtml");
 
 // init employee objects
 const Engineer = require("./lib/Engineer");
@@ -10,11 +10,6 @@ const Intern = require("./lib/Intern");
 
 // init employees array
 const team = [];
-
-// create HTML
-const getHtml = () => {
-    console.log(team);
-}
 
 // functions for employees
 
@@ -39,7 +34,7 @@ const genEmployee = () => {
             genIntern();
         }
         else if (choices.chooseTeammember === "Completed my team!") {
-            getHtml();
+            writeToFile("./dist/index.html", generateHtml(team));
         }
     })
 }
@@ -274,6 +269,17 @@ const genIntern = () => {
         team.push(createdIntern);
         genEmployee();
     })
+}
+
+// create HTML
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("Success! HTML generated!");
+        }
+    });
 }
 
 // init app
