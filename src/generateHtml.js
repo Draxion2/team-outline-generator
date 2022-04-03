@@ -25,7 +25,7 @@ joinAllTeam = allCards => {
 
         <!-- team members display -->
         <section class="teamDisplay">
-                ${allCards}
+            ${allCards}
         </section>
     </body>
     </html>
@@ -82,7 +82,7 @@ const genManager = manager => {
                 <li class="body-list"><strong>Offce Number:</strong> ${manager.officeNumber}</li>
             </ul>
         </div>
-    </div>`
+    </div>`;
 }
 
 // engineer
@@ -100,7 +100,7 @@ const genEngineer = engineer => {
                 <li class="body-list"><strong>Github:</strong> <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
             </ul>
         </div>
-    </div>`
+    </div>`;
 }
 
 // intern
@@ -118,7 +118,7 @@ const genIntern = intern => {
                 <li class="body-list"><strong>School:</strong> ${engineer.school}</a></li>
             </ul>
         </div>
-    </div>`
+    </div>`;
 }
 
 // export generateHTML
