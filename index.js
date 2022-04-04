@@ -11,6 +11,17 @@ const Intern = require("./lib/Intern");
 // init employees array
 const team = [];
 
+// create HTML
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("Success! HTML generated!");
+        }
+    });
+}
+
 // functions for employees
 
 // general employee
@@ -269,17 +280,6 @@ const genIntern = () => {
         team.push(createdIntern);
         genEmployee();
     })
-}
-
-// create HTML
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err)
-        } else {
-            console.log("Success! HTML generated!");
-        }
-    });
 }
 
 // init app

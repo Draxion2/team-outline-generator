@@ -32,7 +32,7 @@ joinAllTeam = allCards => {
     `;
 }
 
-// generate the HTML file
+// // generate the HTML file
 generateHtml = arr => {
 
     // filter through generated team arr
@@ -55,14 +55,12 @@ generateHtml = arr => {
                 membersArr.push(intCard);
                 break;
         }
-
-        // join all members
-        const allCards = membersArr.join('');
-
-        // generate the whole page
-        const joinAllCards = joinAllTeam(allCards);
-        return joinAllCards;
     }
+
+    // join all members
+    const allCards = membersArr.join('');
+    const joinAllCards = joinAllTeam(allCards);
+    return joinAllCards;
 }
 
 // member functions
@@ -90,8 +88,8 @@ const genEngineer = engineer => {
     return `
     <div class="member-card">
         <div class="card-header">
-            <h3 class="card-name">${engineer.name}/h3>
-            <h4 class="card-role">Manager</h4>
+            <h3 class="card-name">${engineer.name}</h3>
+            <h4 class="card-role">Engineer</h4>
         </div>
         <div class="card-body">
             <ul>
@@ -108,14 +106,14 @@ const genIntern = intern => {
     return `
     <div class="member-card">
         <div class="card-header">
-            <h3 class="card-name">${intern.name}/h3>
-            <h4 class="card-role">Manager</h4>
+            <h3 class="card-name">${intern.name}</h3>
+            <h4 class="card-role">Intern</h4>
         </div>
         <div class="card-body">
             <ul>
                 <li class="body-list"><strong>ID:</strong> ${intern.id}</li>
                 <li class="body-list"><strong>Email:</strong><a href="mailto:${intern.email}"> ${intern.email}</a></li>
-                <li class="body-list"><strong>School:</strong> ${engineer.school}</a></li>
+                <li class="body-list"><strong>School:</strong> ${intern.school}</a></li>
             </ul>
         </div>
     </div>`;

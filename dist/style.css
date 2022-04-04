@@ -60,7 +60,7 @@ header h2 {
 }
 
 .card-body {
-    height: 150px;
+    height: 175px;
     padding: 20px;
     background: var(--gray);
 }
@@ -70,8 +70,9 @@ header h2 {
     word-wrap: break-word;
     background: var(--white);
     margin-top: 8px;
+    height: 40px;
     padding: 5px;
-    font-size: 13px;
+    font-size: 15px;
     box-shadow: 2px 2px 10px #000;
 }
 
