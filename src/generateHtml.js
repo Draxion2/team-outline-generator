@@ -95,7 +95,7 @@ const genEngineer = engineer => {
             <ul>
                 <li class="body-list"><strong>ID:</strong> ${engineer.id}</li>
                 <li class="body-list"><strong>Email:</strong><a href="mailto:${engineer.email}"> ${engineer.email}</a></li>
-                <li class="body-list"><strong>Github:</strong> <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                <li class="body-list"><strong>Github:</strong> <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
             </ul>
         </div>
     </div>`;
